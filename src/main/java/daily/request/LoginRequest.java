@@ -79,7 +79,7 @@ public class LoginRequest {
 
     private static String handleCookie(List<HttpCookie> cookies) {
         List<String> stringList = new ArrayList<>();
-        cookies.stream().forEach(e -> {
+        cookies.forEach(e -> {
             stringList.add(e.toString());
         });
         return String.join(";", stringList);
